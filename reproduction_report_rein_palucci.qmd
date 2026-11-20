@@ -1,0 +1,765 @@
+---
+title: 'A comment on: "Recovery of kicking kinematics and performance following repeated high-intensity running bouts in the heat: Can a rapid local cooling intervention help young soccer players?"'
+author:
+  - name: "Robert Rein"
+  - email: "r.rein@dshs-koeln.de"
+    affiliations:
+    - name: "German Sport University Cologne"
+      department: "Institute of Training Science and Sports Informatics"
+format: html 
+execute:
+  warning: false
+  message: false
+  echo: false
+bibliography: [bibliography.bib, grateful-refs.bib]
+no-cite: |
+  @palucci2023recovery
+---
+
+| Robert Rein
+| r.rein@dshs-koeln.de
+| Institue of Training Science and Sports Informatics
+| German Sport University Cologne
+
+# Abstract
+
+@palucci2023recovery investigates whether an acute cooling intervention of the thigh of the dominant kicking-leg following a fatiguing repeated high-intensity running protocol (RHIP) in a group U17 male (N = 15) developmental players ($16\pm 1$yrs) improves kicking performance compared to a control condition without cooling. Two experiments were performed. The first experiment served as a manipulation check to ensure that the chosen RHIP was appropriate to trigger the desired fatigue. The second experiment was used a randomized cross-over pre-post experimental design where each participant served as their own control. The authors used a number of end-points including subjective measurements including for example rate of perceived exertion (RPE) and pain, performance measures of the ball including velocity and kicking accuracy, and leg kinematics including joints angles and segment velocities. The results from Experiment 1 showed that the RHIP led to the expected detriments in performance and increases in subjective measures of exertion. The results from Experiment 2 showed a number of differences between the conditions. The main claim of the experiment is, that a brief cooling intervention of five minutes after a fatiguing sprint protocol is effective to restore kicking related precision and velocity parameters. However, given the specification given by the paper these claims do not hold, as the no significant interactions effects were found for this endpoints. 
+
+# 1. Introduction
+
+The data used by @palucci2023recovery was collected in two field experiments (p. 431: *Two experiments were conducted to test the study hypothesis [...]*). Experiment 1 was a manipulation check study which included $13$ of the $15$ players used in Experiment 2 which investigated whether the chosen sprinting protocol was sufficient to trigger the needed fatigue effects on shooting precision. Experiment 2 was the main experiment of the study and is relevant with respect for the main scientific claims of the paper.
+
+## Sample
+
+In both experiments the same sample of $N = 15$ U17 male football players were used but in Experiment 1 only $13$ of the $15$ players were included.
+
+## Endpoints
+
+Kicks were performed at maximum velocity aimed at a target at the centre of a football goal from a distance of $18$m. Ball and body kinematics at ball impact were determined from two synchronized GoPro Cameras placed at an angle of $90^o$ (resolution $1280\times960$px) running at $240$Hz. OpenPose was used to determine **seven body keypoint** positions (reported system error of $3.49$cm) and subsequently converted into 3D coordinates using DLT. From these coordinates the dependent segment kinematics were derived.
+
+Ball displacements were hand tracked from the video recordings. Kicking accuracy measurements were determined from two additional GoPro Cameras (resolution $1920\times1080$px) running at $60$Hz using hand tracking. The dependent kicking accuracy measures mean radial error (MRE), bivariate radial error (BVE) and accuracy were calculated using the following formulas:
+
+$$
+\begin{aligned}
+\text{MRE} &= \frac{1}{N}\sum_{i=1}^N \sqrt{(x_{\text{target}}-x_{\text{ball}})^2+(y_{\text{target}}-y_{\text{ball}})^2} \\
+\text{BVE} &= \sqrt{\text{SD}_x^2 + \text{SD}_y^2} \\
+\text{accuracy}&=\sqrt{\text{MRE}^2 + \text{BVE}^2}
+\end{aligned}
+$$
+
+This results in a total of 16 endpoints (compare @tbl-end-points) which were collected in both experiments. In Experiment 1 before and after the repeated high-intensity running protocol, in Experiment 2 before and after RHIP + treatment. 
+
+| No | Measure | Data collection type |
+| -|:--- |:------ |
+| 1 | RPE - Rate of perceived exertion | Questionnaire: Borg scale (0-10) |
+| 2 | Pain | Questionnaire: Likert scale (0-10) | 
+| 3 | Recovery | Questionnaire: Likert scale (0-10) |
+| 4 | Thigh temperature | Infrared thermometer |
+| 5 | Mean radial error | Determined from video recordings |
+| 6 | Bivariate radial error | Determined from video recordings |
+| 7 | Accuracy | Determined from video recordings |
+| 8 | Peak ball speed | Determined from video recordings |
+| 9 | $\text{CM}_{\text{foot}}$ Velocity | OpenPose from video recordings |
+| 10 | $\text{CM}_{\text{foot}}$ to knee relative Velocity | OpenPose from video recordings |
+| 11 | Non-preferred hip velocity | OpenPose from video recordings |
+| 12 | Peak knee angular velocity | OpenPose from video recordings |
+| 13 | ROM hip | OpenPose from video recordings |
+| 14 | ROM knee | OpenPose from video recordings |
+| 15 | Plantarflexion at impact | OpenPose from video recordings |
+| 16 | Eversion angle at impact | OpenPose from video recordings |
+
+: End-points collected {#tbl-end-points}
+
+In addition the reliability of the high-intensity running protocol was assessed based on the running times of the ten 30m sprints using several different duration measurements endpoints (compare @tbl-reliability-measures).
+
+| No | Measure | Data collection type |
+| -|:--- |:------ |
+| 16 | Mean Time | Manual recording |
+| 17 | Worst Time | Manual recording |
+| 18 |  Best Time | Manual recording |
+| 19 | Total Time | Manual recording |
+| 20 | Percentage of velocity decay Time | Manual recording |
+
+: Reliability measurements {#tbl-reliability-measures}
+
+No ranking of endpoints was reported.
+
+## Statistical analysis
+
+Statistical analysis for the pre-post measurements in Experiment 1 used either a dependent t-Test or a non-parametric Wilcoxon signed-rank, depending on whether a preceding Shapiro-Wilk test flagged deviations from a non-normal distribution, for raw data value or after log-transforming raw data values. Effect sizes were calculated either as Cohen's D or $r = z\sqrt{N}$ accordingly. 
+
+In Experiment 2, reliability measures were analyzed using Intraclass correlation coefficient (ICC), t-Tests, typical error, and coefficient of variation. For the ICC the exact type was not specified and no definition for typical error was given. Differential changes from pre- to post-measurements between conditions were assessed using 2 x 2 Repeated measures ANOVA and partial $\eta^2$ was used as an effect size measurement. Post-hoc tests were Bonferroni adjustment and no pre-set number of tests was given for the Bonferroni adjustment. Alternatively Friedman-tests were performed, which is usually used as an alternative for a one-way repeated-measures ANOVA as it neglects the 2x2 structure. No criteria was given which decided which test to use.
+
+All statistical analyses were reported to had been performed using the IBM Statistical Package for the Social Sciences v.25. The significance level p was set to $p = 0.05$ and no adjustments for the number of tests across the endpoints was used.
+
+## Data sources
+
+The authors provided MatLab- and Excel files which can be downloaded from a public OSF repository (osf.io/bd8zv). Two MatLab files appear to contain the raw data derived from the video recordings analysed using the OpenPose-DLT pipeline and the tracking data from the ball. The file `data_2Dkinematics.mat` contained the raw data for the ball kinematics, whereas `data_3Dkinematics.mat` contained the raw data for segments kinematics. The Excel-Files contained analysis data (compare @tbl-excel-files).
+
+| File | Endpoints |
+|:--- | --- |
+| raw_ball_velocity | 8 |
+| raw_data_accuracy | 5-7 |
+| raw_lower_limb_factors | 9-16 |
+| raw_perceptual_measures | 1-3 |
+| raw_RSA_running_protocol | 17-20 |
+
+: Mapping endpoints to Excel-files {#tbl-excel-files}
+
+No code book nor analysis scripts were provided, thus all reproducibility procedures including data processing had to be hand-coded.
+
+# Computational reproducibility 
+
+The authors implemented their analysis using SPSS v25 whereas the reproducibility testing reconstructed the analyses independently using the R statistical environment. The analyses were executed according to the descriptions in the article. As neither SPSS nor Excel directly work on MatLab-Files there have to analysis scripts which transform the data into the according file formats. However, these were not available in the data repository. Accordingly, the article is not computationally reproducible from the deposited analysis data, since the package does not contain the code required to reproduce all of the published estimates. This classification reflects the incompleteness of the files rather than a demonstrated failure of the original code. In summary, the results from the published paper were **partially reproducible** from the data provided (see individual sections) and compare @tbl-reproassess.
+
+| Type | Fully | Partial | No |
+|:------- | --- | --- | --- |
+| Raw data provided | | X | |
+| Cleaning code provided | | | X |
+| Analysis data provided | | X | |
+| Analysis code provided | | | X |
+| Reproducible from raw data | | X | |
+| Reproducible from analysis data | | X | |
+
+: Assessment of data and reproducibility {#tbl-reproassess} 
+
+## Computational reproducibility of analysis data
+```{r load_libs}
+require(tidyverse)
+require(readxl)
+require(psych)
+require(emmeans)
+require(grateful)
+require(coin)
+require(testthat)
+require(knitr)
+```
+
+```{r load_helper}
+source('helper_functions.R')
+```
+
+```{r define_constants}
+DATA_FOLDER <- "I4R_PKG_DIR/"
+E1 <- "Experiment_1"
+E2 <- "Experiment_2"
+ACC_FILE <- paste0(DATA_FOLDER, "raw_data_accuracy.xlsx")
+LIMB_FILE <- paste0(DATA_FOLDER, "raw_lower_limb_factors.xlsx")
+BALL_FILE <- paste0(DATA_FOLDER, "raw_ball_velocity.xlsx")
+RSA_FILE <- paste0(DATA_FOLDER, 'raw_RSA_running_protocol.xlsx')
+PERC_FILE <- paste0(DATA_FOLDER, "raw_perceptual_measures.xlsx")
+```
+
+
+First, the data from the analysis data contained in the Excel-files was tried to be reproduced. 
+
+**DISCLAIMER**: All scripts used for the computational reproducibility assessment were written by myself. The Claude Code Opus 5.5 model was used to generate only formatting helpers to structure the output. The scripts can be downloaded from github.com/robertreingit/I4R_Reproduction_2026.
+
+Reproducibility was only performed for $CM_{\text{foot}}$-Velocity, ROM hip, ROM knee, Non-preferred hip velocity, Peak knee velocity data. As calculation of the joint-angle data was not possible. In particular, the calculation of the inversion-eversion angle requires the estimation of the foot plane which is not possible given the seven body landmarks provided in the file. Further, the MatLab-file contained joint angles which apparently followed an Euler-angle conventions. However, given that not enough landmarks were provided per segment it was not possible to calculate local coordinate system required for Euler angles. A marker named COM-foot was contained in the markerset providing data about the center of mass of the foot. However, from the documentation in the manuscript it is not clear how the COM of the foot can be derived from the data given. The references given in the method section were also not helpful in this regard and did not provide sufficient information to reproduce the values.
+
+```{r check_matlab_exports}
+# load limb data
+df_matlab_export <- read_csv('I4R_PKG_DIR/palucci_data.csv')
+
+# pre-process
+# Problem: some variables have six, others seven, specifications parts
+df_matlab_export <- df_matlab_export |> mutate(
+  time = case_when(
+    str_detect(var_name, 'pos_RSA') ~ 'inter',
+    str_detect(var_name, 'pos_gelo|pos_control') ~ 'post',
+    str_detect(var_name, 'pre') ~ 'pre',
+    TRUE ~ 'undefined'
+  )) |> 
+  mutate(
+    condition = case_when(
+      str_detect(var_name, 'control') ~ 'CON',
+      str_detect(var_name, 'gelo') ~ 'TRT',
+      TRUE ~ 'undefined'
+    )
+  ) |> 
+  mutate(
+    id = str_extract(var_name, "part\\d+"),
+    trial = paste0('t_', str_extract(var_name, "(?<=_t)\\d+"))
+  )
+
+## Check for identification problems
+expect_false("undefined" %in% unique(df_matlab_export$time))
+expect_false("undefined" %in% unique(df_matlab_export$condition))
+expect_false("undefined" %in% unique(df_matlab_export$id))
+expect_false("undefined" %in% unique(df_matlab_export$trial))
+ 
+# helpers
+get_mean <- function(var, df = df_matlab_export) df |> group_by(time, condition) |> summarize(m = mean({{ var }}), .groups='drop')
+get_individual <- function(var, tm = 'pre', cdt = 'TRT', df = df_matlab_export) {
+  df |> 
+    filter(time == tm, condition == cdt) |>
+    select(id, {{ var }}, trial) |> 
+    pivot_wider(id_cols = 'id', names_from = 'trial', values_from = {{ var }}) |> 
+    arrange(as.numeric(str_remove(id, 'part')))
+}
+
+arrange_part <- function(df = df_matlab_export) arrange(df, as.numeric(str_remove(id, 'part')))
+
+get_id_mat <- function(var, tm = 'pre', cdt = 'TRT', df = df_matlab_export) {
+  get_individual({{var}}, tm, cdt, df) |> select(-id) |> as.matrix()
+}
+
+```
+
+### No trials
+
+From the naming convention of the variables in the `data_3Dkinematics.mat` the testing trials were derived. 
+
+```{r matlab_naming}
+#| label: tbl-names-to-variables
+#| tbl-cap: Mapping names to R factors
+
+set.seed(1)
+df_matlab_export |> select(var_name, time, condition, id, trial) |> sample_n(5) |> knitr::kable()
+```
+
+It appears that only data from Experiment 2 was contained in the file. But this could not be conclusively confirmed. Based on the naming convention it appears that three testing sessions per participants were performed. The convention *pre*, *inter*, *post* was used for *pre_gelo*, *pos_RSA_gelo* and *post_gelo* respectively. However, only two measurement time points were reported in the publication for the ball and segment measurements (pre and post). It also seems that not all trials from all participants are contained in the data (compare @tbl-no-trials). Whether the data is missing completely or just was not stored in the MatLab-File could not be determined. The manuscript does not report any data points.
+
+```{r number_trials}
+#| label: tbl-no-trials 
+#| tbl-cap: "Number of trials per participant per condition per time."
+ 
+df_matlab_export |> group_by(condition, time, id) |> summarize(n = n()) |>
+  arrange_part() |> 
+  pivot_wider(id_cols = c('condition', 'time'), names_from = 'id', values_from = 'n') |> 
+  kable()
+```
+
+With respect to the data from Experiment 1, for several of the endpoints the values of individual trials and the average for the Pre and Post testing session matched the average values from Experiment 2 to values across both conditions. For example for the average ball velocity from file: `raw_data_accuracy.xlsx` for participant 1 for the PRE timepoint for Experiment 1 the following values were obtained:
+
+```{r e2_to_e1}
+load_sval <- function(range, path = ACC_FILE, sheet)  read_xlsx(path, sheet, range, col_names='var') |> pull(var)
+pre_con <- load_sval("B5", sheet=E2)
+pre_cool <- load_sval("B28", sheet=E2)
+pre_e1 <- load_sval("B4", sheet=E1)
+```
+
+| Variable | Experiment |Value |
+| --- | --- | --- |
+| Part1 - Attempt1 - PRE CONTROL | 2 | `r pre_con` |
+| Part1 - Attempt1 - PRE COOL | 2  | `r pre_cool` |
+| Part1 - Attempt1 - PRE | 1 | `r pre_e1` |
+| Average across Experiment 2 | - | `r (pre_con + pre_cool)/2` |
+
+: Match-up between Experiment 1 and Experiment 2 values for Ball speed for PRE-timepoint for participant 1 {#tbl-match-e1e2}
+
+Similar matches were found for BVE, ACUR, $CM_{\text{foot}}$-Velocity and also in the raw data MatLab-Files.
+
+## $CM_{\text{foot}}$-Velocity
+
+During extract of the according data from `data_3Dkinematics.mat` it appeared that for values of $CM_{\text{foot}}$-Velocity was either erroneously labeled in the dataset or the wrong variable was extracted. As the analysis values contained in *raw_lower_limb_factors.xls* did not match with the according data in the MatLab-File. However, a partial match was found with the values stored under the entry *5 metatarso* in the MatLab-File which is likely the value for the 5th metatarsal. In @tbl-metatarsal-matlab are the extracted metatarsal values from the MatLab-file and in @tbl-cmfootvelocity-excel the values for CMfoot velocity are shown.
+```{r metatarsal_values}
+#| tbl-cap: Metatarsal data from MatLab-file
+#| label: tbl-metatarsal-matlab
+ 
+get_individual(metatarsal, tm = 'post', cdt = 'TRT') |> knitr::kable()
+```
+
+```{r cmfoot_vel_values}
+#| tbl-cap: CMfootVelocity from Excel-File
+#| label: tbl-cmfootvelocity-excel
+
+read_xlsx(LIMB_FILE, 'Vel_CMfoot', 'G28:I42', col_names=paste0('t_',1:3)) |> 
+  mutate(id = paste0('part', 1:15), .before=1) |> kable() 
+```
+
+However, not all values line up. 
+
+As not all trials were present in the dataset no exact matching testing could be performed. However, for those values where data from all participants was available the values for peak hip velocity for **TRT** for both time points was reproduced. The same was found for variables **ROM_hip** and **ROM_knee**.
+
+```{r check_cmvel_meta}
+#| echo: true
+ 
+# Checking datasets
+check_mat <- function(m1, m2, prec = 0.001) (abs(m1 - m2) < prec) |> all()
+
+# peak hip velocity
+m1 <- get_id_mat(peak_hip_vel)
+m2 <- read_xlsx(
+  LIMB_FILE, 'Ndom_hip_peak_Vel', 'B28:D40', col_names=paste0('t',1:3)) |> 
+  as.matrix()
+check_mat(m1, m2)
+
+m1 <- get_id_mat(peak_hip_vel, tm = 'post')
+m2 <- read_xlsx(
+  LIMB_FILE, 'Ndom_hip_peak_Vel', 'G28:I42', col_names=paste0('t',1:3)) |>
+  as.matrix()
+check_mat(m1, m2)
+
+# rom hip
+m1 <- get_id_mat(rom_hip, tm = 'post', cdt = 'TRT')
+m2 <- read_xlsx(
+  LIMB_FILE, 'ROM_hip', 'G28:I42', col_names=paste0('t',1:3)) |> as.matrix()
+check_mat(m1, m2)
+
+# rom knee
+m1 <- get_id_mat(rom_knee, tm = 'post', cdt = 'TRT')
+m2 <- read_xlsx(
+  LIMB_FILE, 'ROM_knee', 'G28:I42', col_names=paste0('t',1:3)) |> as.matrix()
+check_mat(m1, m2)
+```
+
+## Computational reproducibility of documented results
+
+# Experiment 1
+
+For the computational reproducibility for the results from Table 1 of the manuscript was reproduced from the analysis data. Only averages, standard deviations, the test-statistic, and the p-values were sought to be reproduced. The effect sizes were not reproduced.
+
+## Reproduction of Table 1
+
+```{r gen_table_1}
+table_1 <- gen_table_1()
+```
+
+### RPE
+
+For the RPE measurement qualitative reproducibility was achieved.
+
+```{r rep_check}
+read_xls_2("B", "C") |> stats_tbl_1(parametric = FALSE) |> compare_function(table_1[1,2:6])
+```
+
+### Pain
+
+For the PAIN measurement reproducibility was complete.
+
+```{r pain_e1}
+read_xls_2("D", "E") |> stats_tbl_1() |> compare_function(table_1[2,2:6])
+```
+
+### Recovery
+
+For the Recovery measurement reproducibility was complete.
+
+```{r recovery_p1}
+read_xls_2("F", "G") |> stats_tbl_1() |> compare_function(table_1[3,2:6])
+```
+
+### Thigh Temperature
+
+For the thigh temperature qualitative reproducibility was achieved.
+
+```{r temperature_e1}
+read_xls_2("H", "I") |> stats_tbl_1() |> compare_function(table_1[4,2:6])
+```
+
+### Mean radial error
+
+For the mean radial error the reproducibility was complete.
+
+```{r mean_radial_error_e1}
+path <- ACC_FILE
+sheet <- E1
+range <- c("E4:E16", "L4:L16")
+read_xls_11(path, sheet, range) |> stats_tbl_1() |> compare_function(table_1[5, 2:6])
+```
+
+### Mean Bivariate Variable error
+
+For BVE reproducibility was complete.
+
+```{r bve_e1}
+range <- c("F4:F16", "M4:M16")
+read_xls_11(path, sheet, range) |> stats_tbl_1() |> compare_function(table_1[6, 2:6])
+```
+
+### Accuracy
+
+For Accuracy the results were reproduced but a reporting error was detected.
+
+```{r accuracy_e1}
+range <- c("G4:G16", "N4:N16")
+read_xls_11(path, sheet, range) |> stats_tbl_1() |> compare_function(table_1[7, 2:6])
+```
+
+### Average ball speed
+
+For average ball speed, a reporting error was detected but reproducibility was complete.
+
+```{r mre_e1}
+path <- BALL_FILE 
+sheet <- "Experiment_1"
+range <- c("E4:E16","K4:K16")
+read_xls_11(path, sheet, range) |> stats_tbl_1() |> compare_function(table_1[8, 2:6])
+```
+
+### Peak ball speed
+
+Complete.
+
+```{r}
+range <- c("F4:F16", "L4:L16")
+read_xls_11(path, sheet, range) |> stats_tbl_1() |> compare_function(table_1[9, 2:6])
+```
+
+### CM_foot velocity
+
+Qualitatively reproduced.
+
+```{r}
+path <- LIMB_FILE
+sheet <- "Experiment_1"
+range <- c("E4:E16","J4:J16")
+read_xls_11(path, sheet, range) |> stats_tbl_1(parametric = TRUE) |> compare_function(table_1[10, 2:6])
+read_xls_11(path, sheet, range) |> stats_tbl_1(parametric = TRUE, log = TRUE) |> compare_function(table_1[10, 2:6])
+read_xls_11(path, sheet, range) |> stats_tbl_1(parametric = FALSE) |> compare_function(table_1[10, 2:6])
+```
+
+For the remaining tests in Table 1, the data was missing.
+
+# Experiment 2
+
+In Experiment 2, not all tests were assessed for reproducibility.
+
+## Running protocol reliability
+
+For the reliability of the running protocol, reproducibility of parts of Table 2 was investigated, excluding the typical error TE and the coefficient of variation CV.
+
+### MT (s)
+
+Qualitatively reproduced. 
+
+```{r mt_e1}
+path <- RSA_FILE 
+sheet <- 'RSA'
+range <- "B4:K18"
+control <- load_running(path, sheet, range)
+control_bar <- control |> apply(1, mean)
+range <- "B25:K39"
+cool <- load_running(path, sheet, range)
+cool_bar <- cool |>apply(1, mean)
+control_range <- "B4:K18"
+cool_range <- "B25:K39"
+expectations <- c(5.02, 0.41, 4.94, 0.39, 1.456, 0.17, 0.88)
+relia_docu(control_range, cool_range, mean, expectations)
+```
+
+### Worst time - WT
+
+Qualitatively reproduced.
+
+```{r wt_e1}
+expectations <- c(5.35, 0.45, 5.28, 0.42, 0.796, 0.43, 0.74)
+relia_docu(control_range, cool_range, max, expectations, FALSE)
+```
+
+### Best time - BT
+
+Qualitatively reproduced.
+
+```{r bt_e1}
+expectations <- c(4.67, 0.35, 4.53, 0.38, 1.410, 0.18, 0.5)
+relia_docu(control_range, cool_range, min, expectations)
+```
+
+### Total time - TT
+
+Qualitatively reproduced.
+
+```{r tt_e1}
+expectations <- c(50.17, 4.06, 49.39, 3.82, 1.458, 0.17, 0.88)
+relia_docu(control_range, cool_range, sum, expectations)
+```
+
+### Percentage of velocity decay - DEC
+
+Could not be reproduced as it was not clear how it was calculated.
+
+```{r dec_e1}
+expectations <- c(12.53, 4.64, 14.09, 4.48, -0.887, 0.39, -0.43)
+relia_docu(control_range, cool_range, dec, expectations)
+```
+
+## Recovery treatment effects
+
+### Paragraph 1
+
+The results for the RPE measurements were reproduced.
+
+```{r rpe_e2}
+path <- PERC_FILE
+sheet <- "Experiment_2"
+range <- "B4:C18"
+rpe_con <- read_xls_2x(path, sheet, range)
+range <- "B27:C41"
+rpe_cool <- read_xls_2x(path, sheet, range)
+range_control <- "B4:C18"
+range_cool <- "B27:C41"
+expected <- c(13.408, 0.004, 0.30, 3)
+friedman_docu(range_control, range_cool, expected)
+```
+
+#### Post-hoc control pre-post
+
+Qualitatively reproduced.
+
+```{r rpe_post_hoc_1}
+path <- PERC_FILE
+sheet <- "Experiment_2"
+range_control_pre <- c("B4:B18")
+range_control_post <- c("C4:C18")
+expected <- c(1, 0.02, 0.69, 0, 3)
+wilcox_docu(path, sheet, range_control_post, range_control_pre, expected)
+```
+
+#### Post-hoc cool pre-post
+
+Qualitatively reproduced.
+
+```{r  rep_post_hoc_2}
+range_control_pre <- c("B27:B41")
+range_control_post <- c("C27:C41")
+expected <- c(0, 1, 0.34, 0, 2)
+wilcox_docu(path, sheet, range_control_post, range_control_pre, expected)
+```
+
+#### Thigh Temperature
+
+The test for the thigh temperature was reproduced.
+
+```{r temperature_e2}
+range_control <- "H4:I18"
+range_cool <- "H27:I41"
+expected <- c(25.711, 0.001, 0.57, 3)
+friedman_docu(range_control, range_cool, expected)
+```
+
+#### Post-hoc cool pre-post
+
+Qualitatively reproduced.
+
+```{r post_hoc1_temperature_e2}
+range_cool_pre <- c("H27:H41")
+range_cool_post <- c("I27:I41")
+expected <- c(3.3, 0.001, 0.88, 2.4, 4)
+wilcox_docu(path, sheet, range_cool_pre, range_cool_post, expected)
+```
+
+#### Post-hoc cool-control post
+
+Qualitatively reproduced.
+
+```{r post_hoc2_temperature_e2}
+range_control_post <- c("I4:I18")
+range_cool_post <- c("I27:I41")
+expected <- c(3.2, 0.002, 0.88, 2, 3.7)
+wilcox_docu(path, sheet, range_control_post, range_cool_post, expected)
+```
+
+#### Perceived recovery
+
+Reproduced.
+
+```{r recovery_e2}
+range_control <- "F4:G18"
+range_cool <- "F27:G41"
+expected <- c(11.057, 0.011, 0.25, 3)
+friedman_docu(range_control, range_cool, expected)
+```
+
+#### Pain
+
+Qualitatively reproduced.
+
+```{r pain_e2}
+range_control <- "D4:E18"
+range_cool <- "D27:E41"
+expected <- c(0, 0.83, 0.02, 3)
+friedman_docu(range_control, range_cool, expected)
+```
+
+### Paragraph 2
+
+#### Mean Radial Error
+
+Reproduced.
+
+```{r mean_radial_error_e2}
+con_pre_rng <- "E5:E19"
+con_post_rng <- "L5:L19"
+cool_pre_rng <- "E28:E42"
+cool_post_rng <- "L28:L42"
+con_pre <- read_xls_1(ACC_FILE, E2, con_pre_rng)
+con_post <- read_xls_1(ACC_FILE, E2, con_post_rng)
+cool_pre <- read_xls_1(ACC_FILE, E2, cool_pre_rng)
+cool_post <- read_xls_1(ACC_FILE, E2, cool_post_rng)
+accuracy_aov <- AOV_test(con_pre, con_post, cool_pre, cool_post)
+expected <- expected_aov(
+  int_F = 4.286, int_p = 0.057, int_eps = 0.234, int_df1 = 1, int_df2 = 14,
+  con_wtn_d = 0.97, con_wtn_p = 0.003,
+  cool_wtn_d = 0.24, cool_wtn_p = 0.45, NA, NA, NA)
+aov_docu(ACC_FILE, E2, con_pre_rng, con_post_rng, cool_pre_rng, cool_post_rng, expected)
+aov_graph(ACC_FILE, E2, con_pre_rng, con_post_rng, cool_pre_rng, cool_post_rng)
+```
+
+#### Bivariate variable error
+
+Not reproduced.
+
+```{r bve_e2}
+con_pre_rng <- "F5:F19"
+con_post_rng <- "M5:M19"
+cool_pre_rng <- "F28:F42"
+cool_post_rng <- "M28:M42"
+expected <- expected_aov(int_p = 0.16, int_eps = 0.05)
+aov_docu(ACC_FILE, E2, con_pre_rng, con_post_rng, cool_pre_rng, cool_post_rng, expected)
+aov_graph(ACC_FILE, E2, con_pre_rng, con_post_rng, cool_pre_rng, cool_post_rng)
+```
+
+#### Accuracy
+
+Not reproduced as  Pre control doesn't match.
+
+```{r accuracy_e2}
+con_pre_rng <- "G5:G19"
+con_post_rng <- "N5:N19"
+cool_pre_rng <- "G28:G42"
+cool_post_rng <- "N28:N42"
+expected <- expected_aov(int_p = 0.16, int_eps = 0.05)
+aov_docu(ACC_FILE, E2, con_pre_rng, con_post_rng, cool_pre_rng, cool_post_rng, expected)
+aov_graph(ACC_FILE, E2, con_pre_rng, con_post_rng, cool_pre_rng, cool_post_rng)
+```
+
+In the graph there seems to be a mislabeling of cool values.
+
+#### Ball speed average
+
+Reproduced.
+
+```{r ball_speed_e2}
+con_pre_rng <- "E5:E19"
+con_post_rng <- "K5:K19"
+cool_pre_rng <- "E28:E42"
+cool_post_rng <- "K28:K42"
+expected <- expected_aov(int_F = 0.125, int_p = 0.73, int_eps = 0.009, int_df1 = 1, int_df2 = 14,
+  con_wtn_d = -1.01, con_wtn_p = 0.04, cool_wtn_d = -1.4, cool_wtn_p = 0.15)
+aov_docu(BALL_FILE, E2, con_pre_rng, con_post_rng, cool_pre_rng, cool_post_rng, expected)
+aov_graph(BALL_FILE, E2, con_pre_rng, con_post_rng, cool_pre_rng, cool_post_rng)
+```
+
+#### Ball peak
+
+Reproduced.
+
+```{r ball_peak_e2}
+con_pre_rng <- "F5:F19"
+con_post_rng <- "L5:L19"
+cool_pre_rng <- "F28:F42"
+cool_post_rng <- "L28:L42"
+expected <- expected_aov(int_F = 0.394, int_p = 0.54, int_eps = 0.027, int_df1 = 1, int_df2 = 14,
+  con_wtn_d = -1.04, con_wtn_p = 0.02, cool_wtn_d = -1.7, cool_wtn_p = 0.11)
+aov_docu(BALL_FILE, E2, con_pre_rng, con_post_rng, cool_pre_rng, cool_post_rng, expected)
+aov_graph(BALL_FILE, E2, con_pre_rng, con_post_rng, cool_pre_rng, cool_post_rng)
+```
+
+### Paragraph 3
+
+#### Ankle eversion
+
+Qualitatively reproduced.
+
+```{r eversion_e2}
+sheet <- "Ankle eversion"
+con_pre_rng <- "E5:E19"
+con_post_rng <- "J5:J19"
+cool_pre_rng <- "E28:E42"
+cool_post_rng <- "J28:J42"
+expected <- expected_aov(int_F = 5.339, int_p = 0.04, int_eps = 0.276, int_df1 = 1, int_df2 = 14,
+  pre_p = 0.02, post_p = 0.91)
+aov_docu(LIMB_FILE, sheet, con_pre_rng, con_post_rng, cool_pre_rng, cool_post_rng, expected)
+aov_graph(LIMB_FILE, sheet, con_pre_rng, con_post_rng, cool_pre_rng, cool_post_rng)
+```
+
+#### CMfoot velocity
+
+Reproduced.
+
+```{r cmfoot_e2}
+sheet <- "Vel_CMfoot"
+con_pre_rng <- "E5:E19"
+con_post_rng <- "J5:J19"
+cool_pre_rng <- "E28:E42"
+cool_post_rng <- "J28:J42"
+expected <- expected_aov(int_F = 6.538, int_p = 0.02, int_eps = 0.318,
+  post_p = 0.04)
+aov_docu(LIMB_FILE, sheet, con_pre_rng, con_post_rng, cool_pre_rng, cool_post_rng, expected)
+aov_graph(LIMB_FILE, sheet, con_pre_rng, con_post_rng, cool_pre_rng, cool_post_rng)
+```
+
+The foot velocities for some participants appear to be unrealistically high.
+
+# Claims
+
+Only claims were checked with respect to main outcomes of Experiment 2.
+
+## Ball placement recovers after cooling compared to control
+
+| Position | Claim |
+|-|:------|
+| p. 430 | MRE increased only post-control (p = 0.057; eta2 = 0.234) |
+| p. 434 | Time x Condition: F(1, 14) = 4.286, p = 0.057, eta2 = 0.234 |
+| p. 434 | Control Pre vs Post: 0.97 m [0.40, 1.54], p = 0.003, d = −1.12. COOL Pre vs Post: 0.24 m [−0.43, 0.91], p = 0.45, d = −0.25 |
+| p. 435 | BVE and accuracy: no interaction (p > 0.16; eta2 < 0.05) |
+| p. 437 | COOL promoted benefits [...] in ball placement |
+| p. 437 | COOL helped reduce deleterious effects [...] including ball placement |
+| p. 438 | Cooling effective "*especially concerning ball placement*" |
+| p. 438 | Ice packs favoured recovery of "*notably ball placement*" |
+
+This claim is one of the main claims of the paper. However, given the results with no significant interaction effects between time and condition no post-hoc testing was actually warranted and here no statistically significant differences between conditions for post were found. Thus, the conclusion based on the results is **not warranted**.
+
+## Ball speed significant declines after control but after cooling
+
+| Position | Claim |
+|-|:------|
+| p. 430 | Significant small declines post-control (p < 0.05; d = 0.35) |
+| p. 435 | No Time x Condition: average F(1, 14) = 0.126, p = 0.73, eta2 = 0.009 |
+| p. 435 | No Time x Condition: peak F(1, 14) = 0.394, p = 0.54, eta2 = 0.027 |
+| p. 437 | COOL promoted benefits in [...] velocity indicators |
+| p. 437 | COOL helped reduce ball speed declines as observed in the passive resting condition |
+| p. 438 | Ice packs [...] helped favoured recovery "to a lesser extent velocity" |
+
+The mean declines in COOL (−1.40 and −1.70 m/s) are numerically larger than in Control (−1.01 and −1.04 m/s), and there is no statistically significant interaction effect (p = 0.73 and 0.54). The claims of a cooling benefit for ball speed rest only on the COOL declines not reaching significance. No statistically significant differences were found for the post time point which would warrant this claim. Thus, this claim is **not warranted**.
+
+## Foot velocity ($CM_{\text{foot}}$) was faster after cooling than after control
+
+| Position | Claim |
+| -|:-------|
+| p. 430 | Post-intervention foot center-of-mass velocity was moderately faster in cooling (p = 0.04; d = 0.60) |
+| p. 436 | Time x Condition: F(1, 14) = 6.538, p = 0.02, eta2 = 0.318. COOL vs Control at Post: 4.61 m/s [0.14, 9.08], p = 0.04, d = 0.60 |
+| p. 437 | COOL promoted benefits in kinematics (CMfoot) |
+| p. 437 | COOL helped reduce deleterious effects on CMfoot |
+| p. 437 | Ergogenic effects of COOL on foot and ball kinematics |
+
+In Experiment 1, $CM_{\text{foot}}$ velocity did not decline after the repeated sprint protocol. Accordingly, the description of a "deleterious effect" on $CM_{\text{foot}}$ under the control condition is not shown by a reported pre-post test. Thus, the support for this claim is **not clear**.
+
+# Further comments
+
+The paper states a registry entry in the Brazilian Clinical Trial Registry under RBR-8prx2m, however the described study does not match the study reported in the paper.
+
+The power analysis for the cooling effects with respect to precision refers to a study investigating throwing accuracy [@wassinger2007], where cooling was applied to the shoulder for 20 minutes in a rested state which is quite different from the methodological approach used in @palucci2023recovery. The second source, the meta-analysis by @bleakley2012should, refers to the same study.
+
+If indeed the tests were also performed after the sprint-protocol before the intervention, it is not clear why this data was not used in the analysis of Experiment 2. Given that the main aim of the study was to investigate the effect of cooling, a more appropriate comparison would be the difference between the post-sprint test and the post-treatment test results. Comparing pre-sprint with post-treatment can exclude that observed differences were the result of different responses to the sprint-protocol or the result of the intervention. Since no reliability testing was done on the sprint protocol the reliability of the sprint times is not really helpful in this regard. 
+
+Given the number of participants in relation to the number of statistical tests, the lack of any modification of the significance threshold for the different endpoints appears somewhat problematic.
+
+From the MatLab-files it appears that a number of additional endpoints were calculated (data_3Dkinematics.mat: cell deterministic results contains 30 variable entries) which were not mentioned in the paper and it is not clear based on which criteria variables were selected for inclusion in the analysis. 
+
+# Conclusion
+
+Given the results as stated in the paper, the main claims of the paper **do not hold** and from the results it cannot be concluded that a *rapid cooling intervention serves to recover kicking kinematics and performance*. Further, given the limited sample size of $N = 15$ any generalization to other populations, irrespective of the results, is also not warranted.
+
+# Computational environment
+
+```{r sessioninfo}
+sessionInfo()
+```
+
+```{r used_packages}
+pkgs <- cite_packages(pkgs = 'Session', output = "table", out.dir = ".")
+knitr::kable(pkgs)
+```
